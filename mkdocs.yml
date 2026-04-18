@@ -9,14 +9,14 @@ site_author: Xinfoo
 copyright: "Copyright &copy; 2026 Xinfoo"
 
 # ----------------------------- 代码仓库信息 -----------------------------
-repo_name: Xinfoo
-repo_url: https://github.com/Xinfoo   # 👈 请替换为实际仓库地址
+repo_name: Xinfoo-Docs
+repo_url: https://github.com/Xinfoo/Xinfoo-Docs   # 👈 请替换为实际仓库地址
 # edit_uri: edit/main/docs/
 
 # ----------------------------- 主题配置 (Material) -----------------------------
 theme:
   name: material
-  custom_dir: overrides                          # 预留自定义覆盖目录（如需扩展模板）
+  custom_dir: overrides                          # 预留自定义覆盖目录
   language: zh
   palette:
     # 日间模式 —— 干净清爽的浅色调
@@ -68,12 +68,12 @@ theme:
     repo: fontawesome/brands/github               # 仓库图标使用 GitHub
     edit: material/pencil-outline                 # 编辑图标
     view: material/eye-outline                    # 查看源码图标
-    logo: material/library-outline                # 站点 Logo 图标（可换）
+    logo: material/library-outline                # 站点 Logo 图标
   favicon: assets/favicon.png                     # 请将 favicon 放入 docs/assets/
 
 # ----------------------------- 插件 -----------------------------
 plugins:
-  - search:                                       # 内置搜索（已优化）
+  - search:                                       # 内置搜索
       lang: zh
       separator: '[\s\-\.]+'
   - git-revision-date-localized:                  # 显示文档最后更新日期
@@ -83,7 +83,7 @@ plugins:
       minify_html: true
       minify_js: true
       minify_css: true
-  - awesome-pages:                                # 更灵活的导航管理（可选）
+  - awesome-pages:                                # 更灵活的导航管理
       filename: .pages
       collapse_single_pages: true
   - glightbox:                                    # 图片灯箱效果
