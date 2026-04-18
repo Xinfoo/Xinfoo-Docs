@@ -1,0 +1,193 @@
+# mkdocs.yml
+# Xinfoo-Docs的配置文件Material主题
+
+# ----------------------------- 站点基本信息 -----------------------------
+site_name: Xinfoo Docs
+site_url: https://xinfoo.top
+site_description: Xinfoo的文档中心 —— 你的阴间问题解决方案
+site_author: Xinfoo
+copyright: "Copyright &copy; 2026 Xinfoo"
+
+# ----------------------------- 代码仓库信息 -----------------------------
+repo_name: Xinfoo
+repo_url: https://github.com/Xinfoo   # 👈 请替换为实际仓库地址
+# edit_uri: edit/main/docs/
+
+# ----------------------------- 主题配置 (Material) -----------------------------
+theme:
+  name: material
+  custom_dir: overrides                          # 预留自定义覆盖目录（如需扩展模板）
+  language: zh
+  palette:
+    # 日间模式 —— 干净清爽的浅色调
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo                            # 主色调：靛蓝
+      accent: deep orange                        # 强调色：深橙
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至深色模式
+    # 夜间模式 —— 护眼深邃的暗色调
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 切换至浅色模式
+
+  font:
+    text: "Noto Sans"                               # 正文字体
+    code: "JetBrains Mono"                            # 代码字体（支持连字）
+  features:
+    # 导航增强
+    - navigation.instant                          # 瞬时加载（SPA 体验）
+    - navigation.instant.progress                 # 顶部加载进度条
+    - navigation.tracking                         # 滚动时锚点自动更新
+    - navigation.tabs                             # 顶部选项卡式导航
+    - navigation.tabs.sticky                      # 选项卡始终吸顶
+    - navigation.sections                         # 侧边栏分组折叠
+    - navigation.expand                           # 默认展开所有侧边栏分组
+    - navigation.indexes                          # 章节索引页直接嵌入导航
+    - navigation.top                              # 返回顶部按钮
+    - navigation.footer                           # 页脚显示上一页/下一页
+    # 搜索增强
+    - search.suggest                              # 搜索建议
+    - search.highlight                            # 搜索结果高亮
+    - search.share                                # 搜索分享链接
+    # 内容增强
+    - content.code.copy                           # 代码块一键复制
+    - content.code.annotate                       # 代码行注释
+    - content.tabs.link                           # 内容选项卡链接
+    - content.tooltips                            # 术语提示（需搭配 abbr）
+    # 其他
+    - toc.follow                                  # 目录跟随滚动
+    - toc.integrate                               # 目录与正文融合排版
+
+  icon:
+    repo: fontawesome/brands/github               # 仓库图标使用 GitHub
+    edit: material/pencil-outline                 # 编辑图标
+    view: material/eye-outline                    # 查看源码图标
+    logo: material/library-outline                # 站点 Logo 图标（可换）
+  favicon: assets/favicon.png                     # 请将 favicon 放入 docs/assets/
+
+# ----------------------------- 插件 -----------------------------
+plugins:
+  - search:                                       # 内置搜索（已优化）
+      lang: zh
+      separator: '[\s\-\.]+'
+  - git-revision-date-localized:                  # 显示文档最后更新日期
+      enable_creation_date: true
+      type: datetime
+  - minify:                                       # HTML/CSS/JS 压缩
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - awesome-pages:                                # 更灵活的导航管理（可选）
+      filename: .pages
+      collapse_single_pages: true
+  - glightbox:                                    # 图片灯箱效果
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+  - macros:                                       # 支持 Jinja2 宏（增强内容复用）
+      include_yaml:
+        - docs/_data/variables.yml
+
+# ----------------------------- Markdown 扩展 -----------------------------
+markdown_extensions:
+  # Python Markdown 内置扩展
+  - admonition                                    # 提示块
+  - attr_list                                     # 属性列表
+  - def_list                                      # 定义列表
+  - footnotes                                     # 脚注
+  - md_in_html                                    # 在 HTML 块中解析 Markdown
+  - tables                                        # 表格
+  - toc:                                          # 目录生成
+      permalink: true
+      permalink_title: 锚点链接
+      toc_depth: 4
+
+  # PyMdown 扩展（Material 深度整合）
+  - pymdownx.betterem:                            # 更智能的斜体/粗体识别
+      smart_enable: all
+  - pymdownx.caret                                # ^上标^
+  - pymdownx.mark                                 # ==高亮==
+  - pymdownx.tilde                                # ~~删除线~~ 和 ~下标~
+  - pymdownx.critic                               # 批注模式 {++新增++}{--删除--}{>>评论<<}
+  - pymdownx.details                              # 可折叠块
+  - pymdownx.emoji:                               # Emoji 支持
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:                           # 代码高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite                         # 内联代码高亮
+  - pymdownx.keys                                 # 键盘按键样式 ++ctrl+alt+del++
+  - pymdownx.snippets:                            # 文件嵌入
+      base_path: docs
+      check_paths: true
+  - pymdownx.superfences:                         # 增强围栏代码块（支持嵌套、图表）
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:                              # 内容选项卡
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:                            # 任务列表
+      custom_checkbox: true
+      clickable_checkbox: true
+
+# ----------------------------- 额外配置 -----------------------------
+extra:
+  # 社交链接（显示在页脚）
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Xinfoo
+      name: GitHub
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:dongstarpge@gmail.com
+      name: 邮件联系
+
+  # 分析（如需 Google Analytics，取消注释并填入 ID）
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+
+  # 同意 Cookie（GDPR 合规）
+  consent:
+    title: Cookie 使用同意
+    description: 我们使用 Cookie 来识别重复访问和偏好。
+    actions:
+      - accept
+      - reject
+      - manage
+
+  # 版本化（如需多版本文档）
+  # version:
+  #   provider: mike
+  #   default: stable
+
+# ----------------------------- 导航菜单 -----------------------------
+nav:
+  - 首页: index.md
+# ----------------------------- 其他 -----------------------------
+docs_dir: docs
+site_dir: site
+extra_css:
+  - stylesheets/extra.css                         # 自定义额外样式（可选）
+extra_javascript:
+  - javascripts/extra.js                          # 自定义脚本（可选）
+
+# 监视排除（加速构建）
+watch:
+  - overrides
+  - docs
+exclude_docs: |
+  /drafts/
+  /_snippets/

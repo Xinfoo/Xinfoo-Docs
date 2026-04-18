@@ -1,0 +1,22 @@
+/* 自定义微调 —— 让细节更优雅 */
+:root {
+  --md-primary-fg-color: #4051b5;                /* 微调主色 */
+  --md-accent-fg-color: #ff7043;                 /* 微调强调色 */
+}
+
+/* 代码块圆角更柔和 */
+.md-typeset pre > code {
+  border-radius: 0.5rem;
+}
+
+/* 引用块左侧加一条彩色边 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+  background-color: rgba(0,0,0,0.02);
+}
+
+/* 图片圆角 + 轻微阴影 */
+.md-typeset img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
