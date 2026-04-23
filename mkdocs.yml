@@ -161,7 +161,7 @@ extra:
 
   # 同意 Cookie（GDPR 合规）
   consent:
-    title: Cookie 使用同意
+    title: Cookie
     description: 我们使用 Cookie 来识别重复访问和偏好。
     actions:
       - accept
@@ -176,6 +176,7 @@ extra:
 # ----------------------------- 导航菜单 -----------------------------
 nav:
   - 首页: index.md
+  - Arch Linux 安装教程: archinstall.md
 # ----------------------------- 其他 -----------------------------
 docs_dir: docs
 site_dir: site
