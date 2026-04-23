@@ -1,6 +1,9 @@
 # 为什么会有这篇教程
 
-**Arch Linux** 以其极高的自定义性和简易的包管理吸引了不少用户，但是这也带来了一个问题，就是不太友好的安装过程。虽然可以用官方的 `archinstall` 但是这很容易让初学者之后面对一些基本问题束手无策。想自己安装？但是官方的安装教程又没有教你如何配置成一个可用的，像那些开箱即用的发行版的状态。所以这个教程就诞生了，这个教程主要在官方安装教程的基础上添加了关于显卡驱动，桌面环境等等这些其他发行版包含的开箱即用的配置。
+**Arch Linux** 以其极高的自定义性和简易的包管理吸引了不少用户，但是这也带来了一个问题，就是不太友好的安装过程。虽然可以用官方的 `archinstall` 但是这很容易让初学者之后面对一些基本问题束手无策。想自己安装？按照官方的教程装完了，开机就一个大黑屏终端，不知道干什么。所以这个教程就诞生了，这个教程主要在官方安装教程的基础上添加了关于显卡驱动，桌面环境等等这些开箱即用的配置。
+
+!!! info "内容来源："
+    本文基于 Arch Wiki ，所有内容均可在 Arch Wiki 上溯源，文章末尾放有参考链接。
 
 !!! tip "提示："
     本文主要使用 vim 编辑器，在使用编辑器的段落可以替换为自己习惯用的编辑器。
@@ -965,3 +968,24 @@ reboot
 [如何不弄坏你的 Arch Linux ？](https://wiki.archlinuxcn.org/wiki/建议阅读/给新用户的关于如何不去弄坏_Arch_Linux_系统的建议)
 
 [建议阅读！管理您的 Arch Linux ！](https://wiki.archlinuxcn.org/wiki/建议阅读)
+
+---
+
+# 参考资料
+
+https://wiki.archlinuxcn.org/wiki/安装指南
+
+https://wiki.archlinuxcn.org/wiki/Iwd
+
+https://wiki.archlinuxcn.org/wiki/F2FS
+
+https://wiki.archlinuxcn.org/wiki/网络配置
+
+https://wiki.archlinuxcn.org/wiki/NVIDIA
+
+https://wiki.archlinuxcn.org/wiki/GRUB
+
+https://wiki.archlinuxcn.org/wiki/KDE
+
+https://wiki.archlinuxcn.org/wiki/GNOME
+
