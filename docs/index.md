@@ -1,5 +1,5 @@
 ---
-title: 欢迎来到 Xinfoo Docs
+title: 欢迎来到 Xinfoo Blogs
 hide:
   - navigation
   - toc
@@ -7,12 +7,12 @@ hide:
 
 <!-- 首页特殊样式控制：隐藏侧边栏和目录，全幅展示 -->
 
-# 👋 欢迎来到 Xinfoo Docs
+# 👋 欢迎来到 Xinfoo Blogs
 
 <div style="max-width: 800px; margin: 0 auto; text-align: center;" markdown>
 
-**Xinfoo** 的技术总结文档网站。
-为了自己调用方便，用各种开源工具做了这个网站，如果有人要使用的话，设计比较垃圾请见谅。
+**Xinfoo** 的个人博客。
+为了自己看笔记方便，用 Mkdocs 做了这个网站，如果有人要使用的话，设计比较垃圾请见谅。
 
 </div>
 
