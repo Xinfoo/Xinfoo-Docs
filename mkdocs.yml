@@ -2,9 +2,9 @@
 # Xinfoo-Docs的配置文件Material主题
 
 # ----------------------------- 站点基本信息 -----------------------------
-site_name: Xinfoo Docs
+site_name: Xinfoo Blogs
 site_url: https://xinfoo.top
-site_description: Xinfoo的文档中心 —— 你的阴间问题解决方案
+site_description: Xinfoo的个人博客 —— 你的阴间问题解决方案
 site_author: Xinfoo
 copyright: "Copyright &copy; 2026 Xinfoo"
 
