@@ -176,7 +176,7 @@ extra:
 # ----------------------------- 导航菜单 -----------------------------
 nav:
   - 首页: index.md
-  - Arch Linux 安装教程: archinstall.md
+  - Arch Linux 安装笔记: archinstall.md
 # ----------------------------- 其他 -----------------------------
 docs_dir: docs
 site_dir: site
