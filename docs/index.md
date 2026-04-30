@@ -12,15 +12,15 @@ hide:
 <div style="max-width: 800px; margin: 0 auto; text-align: center;" markdown>
 
 **Xinfoo** 的个人博客。
-为了自己看笔记方便，用 Mkdocs 做了这个网站，如果有人要使用的话，设计比较垃圾请见谅。
+为了自己看笔记方便，用 Mkdocs 做了这个网站，如果你没经过我本人发网址找到这里了，那你牛逼。
 
 </div>
 
 ---
 
-## 😰 我是个新手站长
+## 😰 不要攻击网站
 
-这个站点在2026年4月才建立，如果各位想要攻击的话，请手下留情。
+这个站点在2026年4月才建立，就是个我自己的笔记本，如果各位想要攻击的话，请手下留情。
 
 ---
 
@@ -32,25 +32,20 @@ hide:
 
 ## 🤔 为什么搜不到
 
-你难道指望一个作者没有任何知名度，网站名字甚至和其他实体重名的小网站能被搜到？
+我故意的。
 
 ## 📢 声明
 
-!!! warning "这不是官方文档的替代品"
+!!! warning "谨慎参考！"
 
-    本库内容均为 **个人经验总结**，不保证在所有环境下 100% 复现或有效。  
+    本库内容均为 **个人经验总结**，有很强的个人风格，对他人可读性欠佳。  
     **在生产环境执行任何命令前，请务必理解其含义，并做好备份。**
-
-!!! info "文档持续更新中"
-
-    Xinfoo还在持续肘击电脑中，本文档也会随缘更新。  
-    如果你有同样冷门但有用的解法，欢迎通过 GitHub 贡献。
 
 ---
 
 <div style="text-align: center; margin-top: 3rem;" markdown>
 
-[:fontawesome-brands-github: Follow On Github ](https://github.com/Xinfoo){ .md-button .md-button--primary }
+[:fontawesome-brands-github: Github ](https://github.com/Xinfoo){ .md-button .md-button--primary }
 
 </div>
 
