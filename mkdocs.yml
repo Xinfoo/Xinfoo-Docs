@@ -4,13 +4,13 @@
 # ----------------------------- 站点基本信息 -----------------------------
 site_name: Xinfoo Blogs
 site_url: https://xinfoo.top
-site_description: Xinfoo的个人博客 —— 你的阴间问题解决方案
+site_description: Xinfoo的笔记站
 site_author: Xinfoo
 copyright: "Copyright &copy; 2026 Xinfoo"
 
 # ----------------------------- 代码仓库信息 -----------------------------
 repo_name: Xinfoo-Docs
-repo_url: https://github.com/Xinfoo/Xinfoo-Docs   # 👈 请替换为实际仓库地址
+repo_url: https://github.com/Xinfoo/Xinfoo-Docs   # 仓库地址
 # edit_uri: edit/main/docs/
 
 # ----------------------------- 主题配置 (Material) -----------------------------
@@ -176,7 +176,7 @@ extra:
 # ----------------------------- 导航菜单 -----------------------------
 nav:
   - 首页: index.md
-  - Arch Linux 安装笔记: archinstall.md
+  - Arch Linux 安装笔记: arch_linux_installation_notes.md
 # ----------------------------- 其他 -----------------------------
 docs_dir: docs
 site_dir: site
