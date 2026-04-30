@@ -613,7 +613,7 @@ pacman -S nvidia-settings
 现在广泛使用的蓝牙协议栈实现是 BlueZ ，我们需要安装它：
 
 ```shell
-pacman -S bluez bluez-utils
+pacman -S bluez bluez-utils wireless-regdb
 ```
 
 关于这些包：
@@ -621,6 +621,8 @@ pacman -S bluez bluez-utils
 - **bluez** 这个软件包提供蓝牙协议栈。
 
 - **bluez-utils** 这个软件包提供 `bluetoothctl` 实用程序。
+
+- **wireless-regdb** 确保蓝牙频率符合规范。
 
 然后，我们启用蓝牙服务：
 
@@ -808,7 +810,42 @@ systemctl enable systemd-timesyncd.service
 
 ---
 
-### 10、为 root 账户创建密码并创建非特权账户
+### 10、配置防火墙
+
+使用 firewalld 作为防火墙工具，首先要安装它，运行：
+
+```shell
+pacman -S firewalld
+```
+
+之后，启用 firewalld 的 systemd 单元，运行：
+
+```shell
+systemctl enable firewalld.service
+```
+
+防火墙配置完成。
+
+---
+
+### 11、配置打印机服务
+
+如果您需要连接打印机，需要使用 cups 作为打印机服务，要安装它，运行：
+
+```shell
+pacman -S cups
+```
+之后，启用 cups 服务的套接字来监听打印机服务，运行：
+
+```shell
+systemctl enable cups.socket
+```
+
+打印机服务配置完成。
+
+---
+
+### 12、为 root 账户创建密码并创建非特权账户
 
 为您的主机的 root 账户创建密码，运行：
 
@@ -856,7 +893,7 @@ visudo
 
 ---
 
-### 11、安装系统引导
+### 13、安装系统引导
 
 对于系统引导，有多个引导工具可供选择，这里我们使用 GRUB ，这是目前功能最强大，支持最丰富，也是最稳定的引导管理器。
 
@@ -917,7 +954,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ---
 
-### 12、退出 chroot 环境并卸载硬盘
+### 14、退出 chroot 环境并卸载硬盘
 
 输入：
 
@@ -953,8 +990,8 @@ reboot
 
 ---
 
-## 您的 Arch Linux 安装完毕
-如果您从头到尾未遇到不可解决的问题的话，我们在这里恭喜您，您的 Arch Linux 已经安装完成，让我们一起欢呼！！🌺🌺
+## Arch Linux 安装完毕
+如果从头到尾未遇到不可解决的问题的话，我们在这里恭喜您，您的 Arch Linux 已经安装完成，让我们一起欢呼！！🌺🌺
 
 关于之后要做的事情，我们给出 Arch Wiki上的建议。
 
@@ -985,4 +1022,3 @@ https://wiki.archlinuxcn.org/wiki/GRUB
 https://wiki.archlinuxcn.org/wiki/KDE
 
 https://wiki.archlinuxcn.org/wiki/GNOME
-
