@@ -177,6 +177,7 @@ extra:
 nav:
   - 首页: index.md
   - Arch Linux 安装笔记: arch_linux_installation_notes.md
+  - 安全启动: security_boot.md
 # ----------------------------- 其他 -----------------------------
 docs_dir: docs
 site_dir: site
