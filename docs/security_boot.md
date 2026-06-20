@@ -29,8 +29,14 @@ makepkg -sir
 ```
 
 ## 替换引导管理器
+
+```shell
 cp "/usr/share/shim-signed/shimx64.efi" "/boot/EFI/BOOT/BOOTX64.EFI"
+```
+
+```shell
 cp "/usr/share/shim-signed/mmx64.efi" "/boot/EFI/BOOT/MMX64.EFI"
+```
 
 ## 生成自己的证书
 
